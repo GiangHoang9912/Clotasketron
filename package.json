@@ -1,0 +1,23 @@
+{
+  "name": "tasketron",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^9.0.2"
+  },
+  "dependencies": {
+    "battery-level": "^3.0.0",
+    "is-charging": "^2.0.0",
+    "os-utils": "0.0.14",
+    "ps-node": "^0.1.6",
+    "tasklist": "^4.0.1"
+  }
+}

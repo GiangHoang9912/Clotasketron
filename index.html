@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tasketron</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script>
+</head>
+
+<body>
+  <div id="process">
+    <div class="stats">
+      <div id="proc">
+        <h3>Process</h3>
+        <progress id="procBar" max="100" value="100">
+        </progress>
+        <h3 id="tePeCent">Use/Total : 0/0 (Mb)</h3>
+      </div>
+      <div id='CPU'>
+        <h3>CPU</h3>
+        <progress id="CPUBar" max="100" value="100">
+        </progress>
+        <h3 id="textCuBar">CPU Utilization : 100 %</h3>
+      </div>
+      <div id='battery'>
+        <h3>Battery</h3>
+        <progress id="bateBar" max="100" value="100">
+        </progress>
+        <h3 id="textBateBar">Battery : 100 % (is charging : true)</h3>
+      </div>
+    </div>
+
+    <div id="chart"></div>
+  </div>
+  <div id="process_child">
+    <button id="endTask">End Task</button>
+    <p id="nameProcEnd"></p>
+    <table>
+      <tr>
+        <th>Pid</th>
+        <th>Process Name</th>
+        <th>Memory Usage</th>
+        <th>Status</th>
+        <th>Cpu Time</th>
+      </tr>
+    </table>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
