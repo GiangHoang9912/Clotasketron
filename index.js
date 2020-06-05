@@ -17,7 +17,7 @@ const table = document.querySelector('table');
 const CPUBar = document.querySelector('#CPUBar');
 const textCuBar = document.querySelector('#textCuBar');
 
-let isProcChart = false;
+let isProcChart = true;
 let isCPUChart = false;
 
 let killProcess = [];
