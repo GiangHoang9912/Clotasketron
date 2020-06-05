@@ -55,6 +55,11 @@ function getPercentCpu() {
     if (isCPUChart) {
       drawChart(v * 100, 100);
     }
+    if ((v.toFixed(2) * 100) >= 70) {
+      CPUBar.setAttribute('class', 'red');
+    } else {
+      CPUBar.setAttribute('class', '');
+    }
   });
 }
 
@@ -90,6 +95,14 @@ setInterval(() => {
   const totalMemory = (os.totalmem() / 10 ** 6).toFixed(2);
   const using = (totalMemory - freeMemory).toFixed(2);
 
+  if (((using / totalMemory).toFixed(2) * 100) >= 70) {
+    procBar.setAttribute('class', 'red');
+  } else {
+    procBar.setAttribute('class', '');
+  }
+
+
+
   if (isProcChart) {
     drawChart(using, totalMemory);
   }
@@ -104,6 +117,11 @@ setInterval(() => {
     return batteryLevel();
   }).then(level => {
     batteryBar.value = (level * 100);
+    if ((level * 100) <= 20) {
+      batteryBar.setAttribute('class', 'red');
+    } else {
+      batteryBar.setAttribute('class', '');
+    }
 
     textBattery.innerText = `Battery : ${level * 100}% (is charging : ${isChar})`
   }).catch(err => { console.log(err) });
